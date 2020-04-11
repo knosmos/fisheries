@@ -38,7 +38,7 @@ let readyToPlace = false;
 
 let clearClick = false;
 
-let headStart = 2000;
+let headStart = 1000;
 
 let krakenCtr = 0;
 
@@ -795,6 +795,10 @@ function drawkraken(){
     }
 }
 
+function drawenemybuildings(){
+
+}
+
 function drawExplosions(){
     for(let i=0;i<explosions.length;i++){
         explosions[i].render();
@@ -1000,10 +1004,10 @@ function manageKraken(){
 }
 
 function makePirates(){
-    if(pirateCtr>800&&headStart<=0){
+    if(pirateCtr>500&&headStart<=0){
         console.log(headStart);
-        for(let i=0;i<randint(2,4);i++){
-            enemyShips.push(new pirateship(randint(-10,-5),randint(-5,20)));
+        for(let i=0;i<randint(3,5);i++){
+            enemyShips.push(new pirateship(randint(-30,-10),randint(-50,50)));
         }
         for(let s of enemyShips){
             s.redirect(round(gridw/2),round(gridh/2));
@@ -1019,7 +1023,7 @@ function makePirates(){
 }
 
 function makeKraken(){
-    if(krakenCtr>400){ //TESTING PURPOSES (ORIGINAL 300)
+    if(krakenCtr>300){ //TESTING PURPOSES (ORIGINAL 300)
         let x=randint(0,30);
         let y=randint(0,20);
         let nothingHere = true;
