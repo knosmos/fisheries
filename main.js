@@ -1000,10 +1000,10 @@ function manageKraken(){
 }
 
 function makePirates(){
-    if(pirateCtr>700&&headStart<=0){
+    if(pirateCtr>800&&headStart<=0){
         console.log(headStart);
-        for(let i=0;i<randint(5,7);i++){
-            enemyShips.push(new pirateship(randint(-10,-5),randint(-30,30)));
+        for(let i=0;i<randint(2,4);i++){
+            enemyShips.push(new pirateship(randint(-10,-5),randint(-5,20)));
         }
         for(let s of enemyShips){
             s.redirect(round(gridw/2),round(gridh/2));
